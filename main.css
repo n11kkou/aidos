@@ -1,0 +1,893 @@
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    margin: 0px;  
+    overflow: scroll;
+}
+body::-webkit-scrollbar {
+    display: none;
+}  
+#open{
+    display: none;   
+    color: #fafafa;
+    margin: 5px 445px;
+    position: fixed;
+    z-index: 2;
+}
+#clo{
+    display: none; 
+    color: #818181;
+    float: right;
+    margin-top: -17%;
+    z-index: 2;
+    padding-right: 10px;
+}
+.bg-image{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://cdn.webshopapp.com/shops/281654/files/288679101/leverage-gym-categorie.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    -webkit-filter: blur(5px); 
+    height: 750px;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px 0px 680px;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0px; 
+    right: 0px;
+} 
+.menu a{
+    text-decoration: none; 
+    padding: 5px 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: white;
+}
+.menu #about:hover, #about:hover, #class:hover, #schedule:hover, #contact:hover, #less:hover{
+    color: #f63;
+    
+}
+#home{
+    color:   #f63;
+    cursor: context-menu;
+}
+#but{
+    background-color: #f63; 
+    color: white;
+    padding: 7px 20px;
+    border: none;
+    font-size: 20px;
+}
+
+.text_on_img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.user_profile{
+    position: fixed;
+    top: 700px;
+    right: 5px;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    z-index: 1;
+    display: none;
+}
+
+#profile_img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline;
+}
+
+#user_name{
+    margin: 0;
+    padding: 10px;
+    display: inline;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text_on_img #p1, #h11{
+    color: white;
+    text-align: center;
+    font-family: 'Big Shoulders Stencil Text', cursive;
+
+}
+#p1{
+    font-size: 45px;
+    letter-spacing: 4px;
+}
+#h11{
+    font-size: 90px;
+    padding-bottom: 5px;
+    letter-spacing: 10px;
+}
+.button{ 
+    margin-left: 160px;
+    margin-top: 0;
+}
+#bt{
+    color: white;
+    background-color:  #f63;
+    text-align: center;
+    border: none;
+    padding: 10px 60px; 
+    margin-right: 20px;
+}
+#bt2{
+    color: white;
+    background-color:  #f63;
+    text-align: center;
+    border: none;
+    padding: 9px 80px; 
+}
+.button a{
+    text-decoration: none;
+    color: white;
+}
+
+.button a:hover{
+    color: rgb(187, 185, 185);
+}
+
+.top{
+    position: fixed;
+    z-index: 1001;
+    top: 690px;
+    left: -5px;
+}
+#top{
+    cursor: pointer;
+    width: 4%; 
+}
+
+
+
+.popup{
+    position: absolute;
+    top: -5%; 
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb(0, 0, 0, 0.6);
+    z-index: 1000000;
+
+    display: none;
+    opacity: 0;    
+}
+
+.popup-content{
+    position: absolute;
+    background-color: white;
+    height: 640px;
+     width: 500px;
+    position: relative; 
+    padding: 20px 70px;
+    border-radius: 10px;
+    text-align: center;  
+    margin-left: 35%; 
+    margin-top: 5%; 
+}
+#registr_h{
+    font-size: 40px ;
+    letter-spacing: 5px; 
+}
+#registr_p{
+    color: grey;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.name{
+    display: flex;
+}
+input{
+    padding: 5px;
+}
+#first_name, #last_name{
+    width: 175px;
+    margin-bottom: 10px;
+}
+#first_name{
+    margin-right: 20px;
+}
+#birthday, #cities, #email, #pwd, #age{
+    width: 370px;
+    margin-bottom: 10px;
+}
+#cities{
+    padding: 5px;
+}
+#btn_suc{
+    margin-top: 5px;
+    width: 370px;
+}
+.check, #email{
+    margin-top: 10px;
+}
+.closed{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+
+.popup2{
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 25;
+    display: none;
+}
+.popup-content2{
+    background-color: white;
+    height: 300px;
+    width: 500px;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center; 
+}
+#username2, #pass{
+    display: block;
+    margin: 20px auto;
+    width: 50%;
+    padding: 8px;
+}
+.closed2{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.mid{
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Syne Mono', monospace;
+    margin-left: 350px;
+    margin-right: 350px;
+    
+}
+#mid_h2{
+    font-size: 50px;
+    margin-bottom: 5px;
+    letter-spacing: 13px;
+}
+#l{
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+#mid_p{
+    font-size: 20px;
+}
+
+
+.a{
+    position: fixed;
+    z-index: 1000;
+    margin-top: 0%;
+}
+.adver{
+    z-index: 100;
+    position: absolute;
+    margin-left: 0%;
+}
+#adver_btn{
+    padding: 10px;
+    background-color: red;
+    width: 200px;
+    letter-spacing: 2px;
+    font-size: 25px;
+}
+.panel{
+    display: none;
+    height: 470px;
+    width: 700px;
+     background-image: url(https://wallpaperaccess.com/full/4167724.jpg); 
+   /* background-image: url(https://cdn4.vectorstock.com/i/1000x1000/41/48/announce-advertisement-poster-background-vector-20424148.jpg);*/
+    border: 2px solid rgb(0, 0, 0);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.text{
+    text-align: center;
+    margin-top: 15px;
+}
+#prod{
+    width: 150px;
+    position: absolute;
+    margin-top: 20px;
+}
+#prod_p, #prod_h{
+    margin-bottom: 0;
+    margin-left: 0px;
+}
+#prod_h{
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+#prod_p{
+    margin-bottom: 15px;
+}
+.s{
+    width: 200px;
+    text-align: center;
+    margin-top: 40%;
+    margin-left: 35%;
+}
+.slide{
+    display: none;
+    width: 200px ;
+    margin-top: 10px;
+    margin-left: 36%;
+}
+.slide p{
+    text-align: center;
+}
+.inst{
+    z-index: 3;
+    position: absolute;
+    margin-top: 419px;
+}
+.tog{
+    display: none;
+    margin-top: -40px;
+}
+.st{
+    z-index: 4;
+    position: absolute;
+    margin-top: 78px;
+}
+#stop{
+    background-color: gold;
+    padding: 5px 20px;
+    border: none;
+    margin-left: 526px;
+}
+#inst_btn{
+    background-color: slateblue;
+    border: none;
+    padding: 5px;
+    width: 95px;
+}
+
+
+.row1, .row2, .row3{
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 140px 20px 140px;
+}
+.card1, .card2, .card3, .card4, .card5, .card6{
+    width: 600px;
+    display: flex;
+    border: 2px solid;
+    align-items: center;
+}
+
+#img1, #img2, #img3, #img4, #img5, #img6{
+    width: 150px;
+    height: 150px;
+}
+.info{
+    margin-left: 10px;
+}
+#info_p{
+    margin-bottom: 8px;
+}
+.info h1{
+    color:  black;
+    font-size: 25px;
+    text-decoration: underline;
+    text-shadow: 2px 2px 5px #f63;
+}
+.discover1, .discover2, .discover3, .discover4, .discover5, .discover6{
+    color: #ff6633;
+}
+.info a:hover{
+    color: black;
+    text-decoration: none;
+
+}
+
+
+.head_img{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(https://ahchealthenewscdn.azureedge.net/wp-content/uploads/2018/02/people-at-the-gym-treadmill.jpeg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    -webkit-filter: blur(5px); 
+    height: 200px;
+    border: 7px solid black;
+}
+.text_on_3rd{
+    position: absolute;
+    top: 1600px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+
+.page3_part2{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+.group_btn{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.btn1, .btn2, .btn2, .btn3, .btn4, .btn5{
+    box-shadow: 10px 10px 5px #aaaaaa;
+    border: 1px solid rgba(199, 185, 185, 0.699); 
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+.btn1, .btn2, .btn2, .btn3, .btn4{
+    margin-bottom: 35px;
+}
+.container1{
+    margin-left: 50px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+}
+.container2, .container3, .container4, .container5 {
+    display: none;
+    margin-left: 50px;
+    height: 300px;
+    flex-direction: column;
+    text-align: center; 
+}
+#image_card{
+    width: 550px;
+    border-radius: 15px;
+}
+.title{
+    padding-top: 2%;
+}
+#card_btn{
+    color: white;
+    background-color:  #f63;
+    text-align: center;
+    border: none;
+    padding: 10px 30px;
+}
+.page4{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://images.wallpaperscraft.ru/image/trenazhernyj_zal_diski_ves_bodibilding_118105_1920x1080.jpg);
+    height: 752px;
+    background-position: center;
+}
+.p4_text{
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+}
+.p4_text h1{
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.p4_text p{
+    font-size: 15px;
+}
+.dates{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 400px;
+    margin-left: 400px;
+}
+.dates a{
+    color: white;
+}
+.dates a:active{
+    color: #f63;
+}
+.table{
+    padding-left: 18%;
+    padding-top: 25px;
+}
+table{
+    border: 3px solid white;
+    text-align: center;
+}
+table td{
+    width: 230px;
+    color: white;
+}
+#td,#td1,#td2,#td3,#td4,#td5,#td6,#td7,#td8,#td9,#td10,#td11,#td12,#td13,#td14,#td15{
+    padding: 38px;
+}
+
+.location_page{
+    margin-right: 250px;
+    margin-left: 250px;
+    padding-top: 10px;
+    margin-bottom: 50px;
+}
+.all{
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Quicksand', sans-serif;
+    padding-top: 20px;
+}
+.all h3{
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+.location1_row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.location2_row{
+    display: flex;
+    /* justify-content: center; */
+    margin-top: 30px;
+}
+.location1, .location2{
+    display: flex;
+    width: 500px;
+    border: 1px solid #ddd;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    padding: 15px;
+}
+.loc_image{
+    margin-right: 15px;
+}
+#loc_image1, #loc_image2{
+    width: 190px;
+}
+.loc_txt{
+    display: block;
+}
+.loc_txt p, h6{
+    margin: 0;
+}
+.loc_txt h6{
+    font-size: 20px;
+    font-weight: 30px;
+}
+#p{
+    margin-bottom: 20px;
+}
+#all_loc{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+}
+#map_btn{
+    margin-top: 10px;
+    width: 70%;
+    padding: 12px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border-radius: 1px;
+    color: white;
+    background-color:  #f63;
+    text-decoration: none;
+}
+#map_btn:hover{
+    color: rgba(255, 253, 253, 0.623);
+}
+
+
+#map{
+    margin-top: 20px;
+}
+
+
+.footer{
+    background-color: rgb(0, 0, 0, 0.8);
+    height: 300px;
+    padding: 0 230px 0 300px;
+}
+.footer_text{
+    padding-top: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+.links{
+    margin-left: 120px;
+}
+.title1, .title2, .title3 h5{
+    color: #f63;
+    text-decoration: underline;
+}
+.title1_content, .title2_content{
+    display: flex;
+    flex-direction: column;
+}
+.title1_content a, .title2_content, .title3_content a{
+    text-decoration: none;
+    color: white;
+}
+.title1_content a:hover, .title3_content a:hover{
+    color: #f63;
+}
+#ad{
+    margin-top: 5px;
+}
+
+.last_line{
+    background-color: rgb(0, 0, 0, 0.9);
+    height: 55px;
+}
+.last_line_cont p{
+    color: white;
+    padding-left: 7%;
+    padding-top: 15px;
+}
+
+
+
+@media (max-width: 700px) {
+    #open, #clo{
+        display: flex;
+    }
+    .menu{ 
+        background-color: #111; 
+        height: 100%; 
+        z-index: 11000; 
+        display: none;
+        margin-left: 250px;
+        padding: 50px 0px;
+        text-align: center;
+        position: fixed;
+    }
+    .menu a{
+        display: block;
+        color: #ffffff; 
+        border-top: 1px solid #818181;
+        padding: 20px 0;  
+    }
+    .menu a:hover{
+        text-decoration: line-through;
+    }
+    #less{
+        border-bottom: 1px solid #818181;
+    }
+    
+    .menu a:hover {
+        color: #f1f1f1;
+    }
+    #but{
+       margin-top: 20px; 
+    }
+    .popup-content{
+        margin-left: 3%; 
+        height: 690px;
+        width: 450px;
+        padding: 20px 20px;
+    }
+    .name{
+        margin-left: 20px;
+    }
+    
+    #p1{
+        font-size: 23px;
+    }
+    #h11{
+        font-size: 60px;
+    }
+
+    .button{ 
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    #bt{
+        padding: 10px ; 
+        margin-right: 1px;
+    }
+    #bt2{
+        padding: 8px 30px; 
+    }
+
+    .mid{
+        margin-left: 20%;
+        margin-right: 20%; 
+    }
+    #mid_h2{
+        font-size: 40px;
+        letter-spacing: 3px;
+    }
+    #l{
+        width: 150px;
+    }
+    #mid_p{
+        font-size: 15px;
+    }
+    .row1, .row2, .row3{
+        margin-top: 5%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .card1, .card2, .card3, .card4, .card5, .card6{
+        width: 200px;
+        display: block;
+    }
+    #img1, #img2, #img3, #img4, #img5, #img6{
+        width: 200px;
+        height: 200px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    #info_p{
+        margin-bottom: 8px;
+    }
+    .text_on_3rd{
+        top: 2480px;
+    }
+    #third_h{
+        font-size: 37px;
+    }
+    .page3_part2{
+        display: block;
+        margin-top: 13%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 180px;
+    }
+    .group_btn{
+        width: 450px;
+        margin-bottom: 30px;
+    }
+    .container1,.container2, .container3, .container4, .container5 {
+        margin-left: 1%;
+    }
+    #image_card{
+        width: 450px;
+    }
+    .page4{
+        height: 750px;
+    }
+    .p4_text{
+        padding-top: 20px;
+    }
+    .dates{
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    .table{
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    table td{
+        width: 50px;
+    }
+    #td,#td1,#td2,#td3,#td4,#td5,#td6,#td7,#td8,#td9,#td10,#td11,#td12,#td13,#td14,#td15{
+        padding: 25px;
+    }
+
+
+
+
+    .location_page{
+        margin-right: 5%;
+        margin-left: 5%;
+        padding-top: 50px;
+    }
+    .all{
+        text-align: center;
+        margin-bottom: 0px;
+        font-family: 'Quicksand', sans-serif;
+        padding-top: 5px;
+    }
+    .all h3{
+        font-size: 35px;
+        letter-spacing: 3px;
+    }
+    .location1_row{
+        display: block;
+        margin-top: 15px;
+    }
+    .location1, .location2{
+        display: flex;
+        width: 440px;
+    }
+    .location1{
+        margin-bottom: 30px;
+    }
+    .loc_image{
+        margin-right: 15px;
+    }
+    #loc_image1, #loc_image2{
+        width: 170px;
+    }
+
+.s{
+    margin-top: 57%;
+    margin-left: 33%;
+}
+.panel{
+    height: 470px;
+    width: 490px;
+}
+#stop{
+    margin-left: 0px;
+}
+
+.popup2{
+    width: 150%;
+    margin-left: -20%;
+}
+.popup-content2{
+    height: 270px;
+    width: 1000px;
+}
+.popup{
+    top: 0%; 
+}
+.popup-content{
+    height: 630px;
+}
+
+.top{
+    position: fixed;
+    z-index: 1001;
+    top: 690px;
+    left: 0px;
+}
+#top{
+    width: 8%; 
+}
+
+
+.footer{
+    height: 580px;
+    padding: 0 10px 0 10px;
+}
+#foot_img{
+    display: none;
+}
+.footer_text{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.links{
+    margin-left: 0px;
+}
+.links, .contacts{
+    margin-bottom: 50px;
+}
+
+
+}
